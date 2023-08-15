@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "hrajezasedneskasparta"
+version = "0.1.0"
+description = ""
+authors = ["Martin Rosenberg <nitram.rosenberg@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = { version = "^0.95.0", extras = ["all"] }
+jinja2 = "^3.1.2"
+tortoise-orm = { version = "^0.19.3", extras = ["asyncpg"] }
+python-multipart = "^0.0.6"
+python-dotenv = "^1.0.0"
+beautifulsoup4 = "^4.12.2"
+lxml = "^4.9.3"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+selenium = "^4.8.3"
+requests = "^2.28.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

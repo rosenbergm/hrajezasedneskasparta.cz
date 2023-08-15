@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hraje zase dneska Sparta?</title>
+
+    <style>
+        body {
+            padding-top: 2rem;
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        div,
+        p {
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>{{ result }}</h1>
+
+    <!-- Nádech HTML4 -->
+    <DIV>
+        <h3>A bude hrát i:</h3>
+        <ul>
+            {% for date in dates %}
+            <li>{{ date }}</li>
+            {% endfor %}
+        </ul>
+    </DIV>
+
+    <br>
+    <br>
+
+    <p>vyrobeno <a href="https://marrrt.in" , target="_blank">martinem</a></p>
+
+</body>
+
+</html>
