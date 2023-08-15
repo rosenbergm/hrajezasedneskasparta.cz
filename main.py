@@ -37,8 +37,6 @@ dotenv.load_dotenv()
 
 app = FastAPI()
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
-
 admin_auth = HTTPBasic()
 templates = Jinja2Templates(directory="templates")
 
