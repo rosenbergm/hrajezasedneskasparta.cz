@@ -71,10 +71,12 @@ def root(request: Request):
 
     today = date.today()
 
-    result = "Ano" if today in events else "Ne"
+    playing_today = today in events
+    result = "Ano" if playing_today else "Ne"
 
     return templates.TemplateResponse('index.jinja.html', {
         "request": request,
         "result": result,
-        "dates": [date.strftime(e, '%d. %m. %Y') for e in events[1:]]
+        "next_events_text": "A bude hrát i:" if playing_today else "Bude hrát:",
+        "dates": [date.strftime(e, '%d. %m. %Y') for e in (events[1:] if playing_today else events)]
     })

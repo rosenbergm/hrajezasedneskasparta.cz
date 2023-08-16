@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hraje zase dneska Sparta?</title>
 
-    <script async defer data-domain="hrajezasedneskasparta.cz" src="https://analytics.michaljanocko.com/js/plausible.js"></script>
+    <script async defer data-domain="hrajezasedneskasparta.cz"
+        src="https://analytics.michaljanocko.com/js/plausible.js"></script>
 
     <style>
         body {
@@ -36,7 +37,7 @@
 
     <!-- Nádech HTML4 -->
     <DIV>
-        <h3>A bude hrát i:</h3>
+        <h3>{{ next_events_text }}</h3>
         <ul>
             {% for date in dates %}
             <li>{{ date }}</li>
